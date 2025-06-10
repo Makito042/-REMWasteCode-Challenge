@@ -23,16 +23,13 @@ import {
   DialogContent,
   DialogContentText,
   DialogTitle,
-  type StepIconProps,
-  alpha
+  type StepIconProps
 } from '@mui/material';
 import { Search as SearchIcon, Check as CheckIcon } from '@mui/icons-material';
 import ReplayIcon from '@mui/icons-material/Replay';
 import { SkipCard } from './components/SkipCard/SkipCard';
 import { type Skip } from './types/skip';
 import { fetchSkips, getMockedSkips } from './api/skipService';
-// Theme
-import { theme } from './theme/theme';
 
 const steps = [
   'Postcode',
@@ -147,10 +144,6 @@ const App = () => {
 
   const handleBack = () => {
     setOpenConfirmDialog(false);
-  };
-
-  const handleRetry = () => {
-    loadSkips();
   };
 
   // Grid item props type
